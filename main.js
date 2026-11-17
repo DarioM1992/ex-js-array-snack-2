@@ -1,13 +1,29 @@
 import { books } from "./books.js";
 
-const sommaDueNumeri =(a, b) => a + b ;
 
+// SNACK-1
+const sommaDueNumeri =(a, b) => a + b ;
 console.log(sommaDueNumeri(3, 4));
 
-const longBooks= books.filter(book => book.pages > 300)
+const longBooks= books.filter(book => book.pages > 300);
 console.log(longBooks);
 
-const longBooksTitles = longBooks.map(book => book.title)
+const longBooksTitles = longBooks.map(book => book.title);
 console.log(longBooksTitles);
 
 longBooksTitles.forEach(title => console.log(title));
+
+
+// SNACK-2
+
+
+const availableBooks = books.filter(book => book.available === true);
+console.log(availableBooks);
+
+const discountedBooks = availableBooks.map(book => ({...book , price: Number((parseFloat(book.price)* 0.8).toFixed(2))}));
+console.log(discountedBooks);
+
+const fullPricedBook = books.find( book => book.price === Number.isInteger);
+console.log(fullPricedBook);
+
+
