@@ -27,3 +27,13 @@ const fullPricedBook = books.find( book => book.price === Number.isInteger);
 console.log(fullPricedBook);
 
 
+// SNACK-3
+
+const authors = books.map(book => book.author);
+console.log(authors);
+
+const areAuthorsAdults = authors.every(author => author.age >= 18);
+console.log(areAuthorsAdults);
+
+authors.sort ((a ,b ) => (b.age  - a.age));
+console.log(authors);
